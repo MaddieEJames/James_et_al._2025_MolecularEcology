@@ -64,14 +64,14 @@ XXX
 
 ## Extrinsic Reproductive Isolation
 
-We assessed extrinsic reproductive isolation by reanalyzing data from a previous field transplant experiment by Walter et al. (2016). See [Transplant.csv](data/Transplant.csv) for the data file, and [ExtrinsicAnalysis.R](scripts/ ExtrinsicAnalysis.R) for all analysis code.
+We assessed extrinsic reproductive isolation by reanalyzing data from a previous field transplant experiment by Walter et al. (2016). See [Transplant.csv](data/Transplant.csv) for the data file, and [ExtrinsicAnalysis.R](scripts/ExtrinsicAnalysis.R) for all analysis code.
 
 ## Environmental and Phenotypic Analyses
 
 XXX
 
 
-##Theoretical Framework
+## Theoretical Framework
 
 To further understand how various forms of natural selection drive patterns of reproductive isolation in Senecio, we created a mathematical framework to explore how both ecological and mutation-order processes can jointly underlie patterns of reproductive isolation.
 
