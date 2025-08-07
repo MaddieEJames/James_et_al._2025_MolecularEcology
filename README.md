@@ -75,4 +75,4 @@ XXX
 
 To further understand how various forms of natural selection drive patterns of reproductive isolation in Senecio, we created a mathematical framework to explore how both ecological and mutation-order processes can jointly underlie patterns of reproductive isolation.
 
-Our framework extends the classic Unckless-Orr model by introducing an environmental similarity parameter that captures how selection pressures differ between populations adapting to distinct environments. The framework also explores polygenic architectures, showing how genetic complexity amplifies the effects of environmental divergence on speciation probability. See [MathematicalFramework.R](scripts/ MathematicalFramework.R)
+Our framework extends the classic Unckless-Orr model by introducing an environmental similarity parameter that captures how selection pressures differ between populations adapting to distinct environments. The framework also explores polygenic architectures, showing how genetic complexity amplifies the effects of environmental divergence on speciation probability. See [MathematicalFramework.R](scripts/MathematicalFramework.R)
