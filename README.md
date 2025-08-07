@@ -71,7 +71,7 @@ We assessed extrinsic reproductive isolation by reanalyzing data from a previous
 XXX
 
 
-###Theoretical Framework
+##Theoretical Framework
 
 To further understand how various forms of natural selection drive patterns of reproductive isolation in Senecio, we created a mathematical framework to explore how both ecological and mutation-order processes can jointly underlie patterns of reproductive isolation.
 
