@@ -4,8 +4,9 @@ View(CrossesDH)
 
 library(lmerTest)
 
-# Seed set
+#### Linear models to detect the effect of ecotype and clade on RI, with cross type as a random factor ####
 
+# Seed set
 # Run the model, with CrossType as a random factor
 SeedSet <- lmer(RIseedSet.SobelChen ~ Clade * Ecotype + (1 | CrossType), data = CrossesDH)
 
@@ -303,8 +304,7 @@ dev.off()
 
 
 #### Stats for differences from zero ####
-
-CrossesDH <- read.delim("~/Library/CloudStorage/OneDrive-TheUniversityofQueensland/maddieJames/mutationOrderSpeciation/toSubmit/5 - figures/DatasetsAndFigureParts/Figure 3/CrossesDH.txt")
+CrossesDH <- read.delim("~/CrossesDH.txt")
 
 # Subset the data into DD and HH
 DDdata <- CrossesDH[CrossesDH$EcotypeCross == 'DD',]
@@ -314,60 +314,12 @@ DDdataBetween <- DDdata[DDdata$Clade == 'Between',]
 HHdataWithin <- HHdata[HHdata$Clade == 'Within',]
 HHdataBetween <- HHdata[HHdata$Clade == 'Between',]
 
-DDcrosses <- lm(RIseedSet.SobelChen ~ Clade, data = DDdata)
-anova(DDcrosses)
-
+# T-tests to test whether each category (within and between clades for each ecotype) is different from 0
 t.test(DDdataWithin$RIseedSet.SobelChen, mu = 0, alternative = "greater")
 t.test(DDdataBetween$RIseedSet.SobelChen, mu = 0, alternative = "greater")
 t.test(DDdataWithin$RIviability.SobelChen, mu = 0, alternative = "greater")
 t.test(DDdataBetween$RIviability.SobelChen, mu = 0, alternative = "greater")
-
 t.test(HHdataWithin$RIseedSet.SobelChen, mu = 0, alternative = "greater")
 t.test(HHdataBetween$RIseedSet.SobelChen, mu = 0, alternative = "greater")
 t.test(HHdataWithin$RIviability.SobelChen, mu = 0, alternative = "greater")
 t.test(HHdataBetween$RIviability.SobelChen, mu = 0, alternative = "greater")
-
-
-
-
-
-CrossesDH <- read.delim("~/Library/CloudStorage/OneDrive-TheUniversityofQueensland/maddieJames/mutationOrderSpeciation/toSubmit/5 - figures/DatasetsAndFigureParts/phenotype/CrossesDH-ReciprocalsAveraged.txt", header=T)
-# Subset the data into DD and HH
-DDdata <- CrossesDH[CrossesDH$CrossType.1 == 'DD',]
-HHdata <- CrossesDH[CrossesDH$CrossType.1 == 'HH',]
-
-
-#### These ones were used for Headlands - Sept 2024 ####
-
-anova(lm(RIseedSet.SobelChen~Genetic.distance+Environmental.distance.Roda..5.PCs., data = HHdata))
-
-# Response: RIseedSet.SobelChen
-# Df   Sum Sq  Mean Sq F value  Pr(>F)  
-# Genetic.distance                     1 0.210070 0.210070 14.8714 0.06114 .
-# Environmental.distance.Roda..5.PCs.  1 0.042867 0.042867  3.0346 0.22363  
-# Residuals                            2 0.028252 0.014126        
-
-anova(lm(RIviability.SobelChen~Genetic.distance+Environmental.distance.Roda..5.PCs., data = HHdata))
-# Response: RIviability.SobelChen
-# Df   Sum Sq   Mean Sq F value Pr(>F)
-# Genetic.distance                     1 0.019153 0.0191533  0.8016 0.4651
-# Environmental.distance.Roda..5.PCs.  1 0.001558 0.0015581  0.0652 0.8223
-# Residuals                            2 0.047788 0.0238939  
-
-
-anova(lm(RIseedSet.SobelChen~Genetic.distance+Phenotypic.distance..Walter.7.PCs., data = HHdata))
-# Response: RIseedSet.SobelChen
-# Df   Sum Sq  Mean Sq F value  Pr(>F)  
-# Genetic.distance                    1 0.210070 0.210070 17.4582 0.05279 .
-# Phenotypic.distance..Walter.7.PCs.  1 0.047053 0.047053  3.9104 0.18660  
-# Residuals                           2 0.024065 0.012033  
-
-anova(lm(RIviability.SobelChen~Genetic.distance+Phenotypic.distance..Walter.7.PCs., data = HHdata))
-# Response: RIviability.SobelChen
-# Df   Sum Sq  Mean Sq F value Pr(>F)  
-# Genetic.distance                    1 0.019153 0.019153  4.1250 0.1793  
-# Phenotypic.distance..Walter.7.PCs.  1 0.040060 0.040060  8.6275 0.0990 .
-# Residuals                           2 0.009286 0.004643    
-
-
-
