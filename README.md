@@ -60,7 +60,7 @@ To assess the major population structure in the data we identified the most like
 
 ## Intrinsic Reproductive Isolation 
 
-XXX
+We assessed intrinsic reproductive isolation by undertaking crosses both within and between ecotypes as well as within and between the two clades of the phylogeny, for two barriers: F1 seed set and F1 viability (germination). See [IntrinsicRIdata](data/IntrinsicRIdata) for the data file, and [IntrinsicAnalysis.R](scripts/IntrinsicAnalysis.R) for all analysis code.
 
 ## Extrinsic Reproductive Isolation
 
