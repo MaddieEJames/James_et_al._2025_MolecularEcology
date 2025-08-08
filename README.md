@@ -68,7 +68,7 @@ We assessed extrinsic reproductive isolation by reanalyzing data from a previous
 
 ## Environmental and Phenotypic Analyses
 
-We asked whether there was a relationship between environmental distance and levels of reproductive isolation, as well as phenotypic distance and levels of reproductive isolation across the parapatric pairs. See [CrossesDH-ReciprocalsAveraged.txt](data/ CrossesDH-ReciprocalsAveraged.txt) for the data file, and [PhenotypeEnvironment.R](scripts/PhenotypeEnvironment.R) for all analysis code.
+We asked whether there was a relationship between environmental distance and levels of reproductive isolation, as well as phenotypic distance and levels of reproductive isolation across the parapatric pairs. See [CrossesDH-ReciprocalsAveraged.txt](data/CrossesDH-ReciprocalsAveraged.txt) for the data file, and [PhenotypeEnvironment.R](scripts/PhenotypeEnvironment.R) for all analysis code.
 
 ## Theoretical Framework
 
